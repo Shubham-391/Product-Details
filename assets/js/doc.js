@@ -18,13 +18,22 @@ subtract.addEventListener("click", function () {
     if (number.innerHTML > 1) {
         number.innerHTML = +number.innerHTML - 1;
     }
-})
-icon.addEventListener("click", function () {
+});
+
+// let preloader = setTimeout(remove, 5000);
+
+function remove() {
+    document.getElementById("preloader").style.display = "none";
+    document.querySelector("body").classList.remove("overflow-hidden");
+}
+
+function navbar() {
     view.classList.toggle("end-0");
     span1.classList.toggle("crossLine1");
     span2.classList.toggle("crossLine2");
     span3.classList.toggle("d-none");
-});
+    document.querySelector("body").classList.toggle("overflow-hidden");
+}
 
 function openTab(evt, Id) {
     let i = null;
