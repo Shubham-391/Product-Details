@@ -20,7 +20,7 @@ subtract.addEventListener("click", function () {
     }
 });
 
-// let preloader = setTimeout(remove, 5000);
+let preloader = setTimeout(remove, 5000);
 
 function remove() {
     document.getElementById("preloader").style.display = "none";
