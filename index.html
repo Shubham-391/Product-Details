@@ -4,10 +4,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="/assets/images/shoes-logo.png">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link rel="stylesheet" href="/assets/css/styles.css">
     <!-- Primary Meta Tags -->
     <title>Product Details</title>
     <meta name="title" content="Product Details" />
@@ -28,780 +24,822 @@
     <meta property="twitter:image" content="https://metatags.io/images/meta-tags.png" />
 
     <!-- Meta Tags Generated with https://metatags.io -->
-    <title>Product-Details</title>
+    <link rel="icon" href="/assets/images/shoes-logo.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="/assets/css/styles.css">
 </head>
 
-<body class="overflow-hidden">
-    <div id="preloader" class="min-vh-100 position-relative">
-        <div class="position-absolute logoimage">
+<body>
+    <div id="preloader" class="min-vh-100 d-flex align-items-center justify-content-center">
+        <div class="d-flex flex-column align-items-center justify-content-center">
             <img class="w-100" src="/assets/images/footerlogo.png" alt="logo">
+            <p class="poppins fw-medium">Please wait...</p>
         </div>
     </div>
-    <header class="min-height-1090 d-flex flex-column">
-        <div class="d-flex align-items-center justify-content-between py-3 container">
-            <a href=""><img class="w-100" src="/assets/images/shoes-logo.png" alt="logo"></a>
-            <a href=""><img class="w-100" src="/assets/images/shoes-logo2.png" alt="logo"></a>
-        </div>
-        <div class="container-fluid bg-white navContainer d-flex align-items-center">
-            <nav class="container position-relative">
-                <div class="icon pointer position-absolute d-flex d-lg-none flex-column justify-content-between z-3"
-                    onclick="navbar()">
-                    <span class="bg-black span1"></span>
-                    <span class="bg-black position-relative span2"></span>
-                    <span class="bg-black span3"></span>
+    <div id="content" class="d-none">
+        <button id="backToTop" class="position-fixed me-4 mb-4 d_none poppins fw-medium bg-white z-1"
+            onclick="up()">Top</button>
+        <header class="min-height-1090 d-flex flex-column">
+            <div class="d-flex align-items-center justify-content-between py-3 container">
+                <a href=""><img class="w-100" src="/assets/images/shoes-logo.png" alt="logo"></a>
+                <a href=""><img class="w-100" src="/assets/images/shoes-logo2.png" alt="logo"></a>
+            </div>
+            <div class="container-fluid bg-white navContainer d-flex align-items-center">
+                <nav class="container position-relative">
+                    <div class="icon pointer position-absolute d-flex d-lg-none flex-column justify-content-between z-3"
+                        onclick="navbar()">
+                        <span class="bg-black span1"></span>
+                        <span class="bg-black position-relative span2"></span>
+                        <span class="bg-black span3"></span>
+                    </div>
+                    <ul
+                        class="p-0 m-0 gap-3 d-flex flex-lg-row flex-column align-items-center justify-content-center justify-content-lg-end view position-fixed bg-white z-2">
+                        <li class="roboto medium1 fst-normal fw-normal lineHeightNormal"><a href="#home"
+                                class="text-decoration-none text-black" onclick="navbar2()">HOME</a></li>
+                        <li class="roboto medium1 fst-normal fw-normal lineHeightNormal"><a href="#sneaker"
+                                class="text-decoration-none text-black" onclick="navbar2()">SNEAKERS KOPEN</a></li>
+                        <li class="roboto medium1 fst-normal fw-normal lineHeightNormal"><a href="#interview"
+                                class="text-decoration-none text-black" onclick="navbar2()">INTERVIEWS</a></li>
+                        <li class="roboto medium1 fst-normal fw-normal lineHeightNormal"><a href="#sale"
+                                class="text-decoration-none text-black" onclick="navbar2()">SALE</a></li>
+                        <li class="roboto medium1 fst-normal fw-normal lineHeightNormal"><a href="#interview"
+                                class="text-decoration-none text-black" onclick="navbar2()">SNEAKER VAN DE DAG</a></li>
+                        <li class="roboto medium1 fst-normal fw-normal lineHeightNormal"><a href="#interview"
+                                class="text-decoration-none text-black" onclick="navbar2()">SNEAKER FORUM</a></li>
+                        <li class="roboto medium1 fst-normal fw-normal lineHeightNormal"><a href="#interview"
+                                class="text-decoration-none text-black" onclick="navbar2()">BLOG</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div id="home"
+                class="hero-section container d-flex flex-xl-row flex-column align-items-center flex-wrap flex-grow-1 my-4 my-md-5 my-xl-0 gap-4 gap-md-5 gap-xl-0">
+                <div class="col-xl-6 col-12 d-flex flex-column align-items-center align-items-xl-start">
+                    <div class="shoe-large-view mb-3 mb-md-4 d-flex align-items-center w-100">
+                        <img id="main" class="main-image" src="/assets/images/redlargeshoe.png" alt="shoe">
+                    </div>
+                    <div
+                        class="mt-md-1 d-flex align-items-center justify-content-between max-width-624 w-100 flex-wrap gap-3 gap-md-0">
+                        <div><img class="small-shoe-image pointer" src="/assets/images/blackshoe.png" alt="black shoe"
+                                onclick="change(this.src)"></div>
+                        <div><img class="small-shoe-image pointer" src="/assets/images/redlargeshoe.png" alt="red shoe"
+                                onclick="change(this.src)"></div>
+                        <div><img class="small-shoe-image pointer" src="/assets/images/greyshoe.png" alt="grey shoe"
+                                onclick="change(this.src)"></div>
+                        <div><img class="small-shoe-image pointer" src="/assets/images/redblackshoe.png" alt="shoe"
+                                onclick="change(this.src)"></div>
+                    </div>
                 </div>
-                <ul
-                    class="p-0 m-0 gap-3 d-flex flex-lg-row flex-column align-items-center justify-content-center justify-content-lg-end view position-fixed bg-white">
-                    <li class="roboto medium1 fst-normal fw-normal lineHeightNormal"><a href="#home"
-                            class="text-decoration-none text-black" onclick="navbar()">HOME</a></li>
-                    <li class="roboto medium1 fst-normal fw-normal lineHeightNormal"><a href="#sneaker"
-                            class="text-decoration-none text-black" onclick="navbar()">SNEAKERS KOPEN</a></li>
-                    <li class="roboto medium1 fst-normal fw-normal lineHeightNormal"><a href="#interview"
-                            class="text-decoration-none text-black" onclick="navbar()">INTERVIEWS</a></li>
-                    <li class="roboto medium1 fst-normal fw-normal lineHeightNormal"><a href="#sale"
-                            class="text-decoration-none text-black" onclick="navbar()">SALE</a></li>
-                    <li class="roboto medium1 fst-normal fw-normal lineHeightNormal"><a href="#interview"
-                            class="text-decoration-none text-black" onclick="navbar()">SNEAKER VAN DE DAG</a></li>
-                    <li class="roboto medium1 fst-normal fw-normal lineHeightNormal"><a href="#interview"
-                            class="text-decoration-none text-black" onclick="navbar()">SNEAKER FORUM</a></li>
-                    <li class="roboto medium1 fst-normal fw-normal lineHeightNormal"><a href="#interview"
-                            class="text-decoration-none text-black" onclick="navbar()">BLOG</a></li>
-                </ul>
-            </nav>
-        </div>
-        <div id="home"
-            class="hero-section container d-flex flex-xl-row flex-column align-items-center flex-wrap flex-grow-1 my-4 my-md-5 my-xl-0 gap-4 gap-md-5 gap-xl-0">
-            <div class="col-xl-6 col-12 d-flex flex-column align-items-center align-items-xl-start">
-                <div class="shoe-large-view mb-3 mb-md-4 d-flex align-items-center w-100">
-                    <img id="main" class="main-image" src="/assets/images/redlargeshoe.png" alt="shoe">
-                </div>
-                <div
-                    class="mt-md-1 d-flex align-items-center justify-content-between max-width-624 w-100 flex-wrap gap-3 gap-md-0">
-                    <div><img class="small-shoe-image pointer" src="/assets/images/blackshoe.png" alt="black shoe"
-                            onclick="change(this.src)"></div>
-                    <div><img class="small-shoe-image pointer" src="/assets/images/redlargeshoe.png" alt="red shoe"
-                            onclick="change(this.src)"></div>
-                    <div><img class="small-shoe-image pointer" src="/assets/images/greyshoe.png" alt="grey shoe"
-                            onclick="change(this.src)"></div>
-                    <div><img class="small-shoe-image pointer" src="/assets/images/redblackshoe.png" alt="shoe"
-                            onclick="change(this.src)"></div>
+                <div class="col-xl-6 col-12">
+                    <div class="ps-38">
+                        <div>
+                            <h1 class="text-black poppins large3 fst-normal fw-semibold lineHeightNormal mb-3">PREMIUM
+                                MENS
+                                SPORTS
+                                LATHER KEDS</h1>
+                            <div class="d-flex align-items-center gap-2 mb-3 mb-md-4">
+                                <img src="/assets/images/stars.png" alt="stars">
+                                <p class="black2 poppins medium2 fst-normal fw-normal lineHeight134 mb-0">( 5 Customer
+                                    Review )
+                                </p>
+                            </div>
+                            <p
+                                class="text-black poppins medium2 fst-normal fw-normal lineHeight185 opacity06 mt-1 max-width-610 mb-3 mb-md-5">
+                                Sed nec ultricies felis, vitae facilisis ipsum. Morbi id turpis euismod, rhoncus tortor
+                                quis,
+                                lobortis sapien. Sed
+                                imperdiet nulla in leo ullamcorper, in finibus elit porta. Sed eget congue neque, mattis
+                                finibus
+                                neque. In vel dolor ac
+                                augue pretium</p>
+                            <div class="mt-md-4 pt-md-3 d-flex align-items-center mb-3">
+                                <p class="text-black poppins medium2 fst-normal fw-medium lineHeight125 mb-0">Qty:</p>
+                                <div
+                                    class="quantity quantitySize border-radius-21 px-4 d-flex justify-content-between align-items-center ms-4 me-3">
+                                    <span
+                                        class="grey1 josefin medium2 fst-normal fw-normal lineHeight125 subtract pointer">-</span>
+                                    <span
+                                        class="grey1 josefin medium2 fst-normal fw-normal lineHeight125 number">1</span>
+                                    <span
+                                        class="grey1 josefin medium2 fst-normal fw-normal lineHeight125 add pointer">+</span>
+                                </div>
+                                <button
+                                    class="cart border-radius-21 poppins medium2 fst-normal fw-medium lineHeight125">Add
+                                    to
+                                    Cart</button>
+                            </div>
+                            <div class="mt-1 d-flex align-items-center gap-3 mb-3">
+                                <label for="size"
+                                    class="text-black poppins medium2 fst-normal fw-medium lineHeight125 mb-0">Size:</label>
+                                <div
+                                    class="quantitySize border-radius-21 size d-flex align-items-center justify-content-center">
+                                    <select id="size" class="width-85 border-0 pointer">
+                                        <option value="small">S</option>
+                                        <option value="medium">M</option>
+                                        <option value="large">L</option>
+                                        <option value="extra-large">XL</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="mt-1 d-flex gap-4 align-items-center">
+                                <p class="text-black poppins medium2 fst-normal fw-medium lineHeight125 mb-0">Color:</p>
+                                <div class="d-flex align-items-center gap-1">
+                                    <div class="colorBox pointer">
+                                        <div class="bg-red innerColorBox"></div>
+                                    </div>
+                                    <div class="colorBox pointer">
+                                        <div class="bg-brown innerColorBox"></div>
+                                    </div>
+                                    <div class="colorBox pointer">
+                                        <div class="bg-black4 innerColorBox"></div>
+                                    </div>
+                                    <div class="colorBox pointer">
+                                        <div class="bg-grey2 innerColorBox"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-flex gap-4 align-items-center mt-3 mt-md-4 mb-1">
+                                <div class="d-flex align-items-center">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path opacity="0.6"
+                                            d="M6.00977 2C4.07977 2 2.50977 3.57 2.50977 5.5C2.50977 7.08 3.56977 8.403 5.00977 8.837V15.997C5.00877 16.176 5.03677 17.778 6.18377 18.928C6.89177 19.64 7.83977 20 8.99977 20V22L12.9998 19L8.99977 16V18C7.17677 18 7.01577 16.466 7.00977 16V8.837C8.44977 8.403 9.50977 7.08 9.50977 5.5C9.50977 3.57 7.93877 2 6.00977 2ZM6.00977 7C5.18277 7 4.50977 6.327 4.50977 5.5C4.50977 4.673 5.18277 4 6.00977 4C6.83677 4 7.50977 4.673 7.50977 5.5C7.50977 6.327 6.83677 7 6.00977 7ZM19.0098 15.163V7.997C19.0048 6.391 17.9328 4 14.9998 4V2L10.9998 5L14.9998 8V6C16.8288 6 17.0008 7.539 17.0098 8V15.163C15.5698 15.597 14.5098 16.92 14.5098 18.5C14.5098 20.43 16.0798 22 18.0098 22C19.9398 22 21.5098 20.43 21.5098 18.5C21.5098 16.92 20.4498 15.597 19.0098 15.163ZM18.0098 20C17.1828 20 16.5098 19.327 16.5098 18.5C16.5098 17.673 17.1828 17 18.0098 17C18.8368 17 19.5098 17.673 19.5098 18.5C19.5098 19.327 18.8368 20 18.0098 20Z"
+                                            fill="black" />
+                                    </svg>
+                                    <p class="black1 poppins small3 fst-normal fw-light lineHeight125 mb-0">Compare</p>
+                                </div>
+                                <div class="d-flex align-items-center">
+                                    <svg width="29" height="29" viewBox="0 0 29 29" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path opacity="0.6"
+                                            d="M14.5006 23.0258L14.1526 22.7358C6.67062 16.6458 4.64062 14.4998 4.64062 11.0198C4.64062 8.1198 6.96062 5.7998 9.86062 5.7998C12.2386 5.7998 13.5726 7.1338 14.5006 8.1778C15.4286 7.1338 16.7626 5.7998 19.1406 5.7998C22.0406 5.7998 24.3606 8.1198 24.3606 11.0198C24.3606 14.4998 22.3306 16.6458 14.8486 22.7358L14.5006 23.0258ZM9.86062 6.9598C7.59862 6.9598 5.80062 8.7578 5.80062 11.0198C5.80062 13.9778 7.65662 15.9498 14.5006 21.5178C21.3446 15.9498 23.2006 13.9778 23.2006 11.0198C23.2006 8.7578 21.4026 6.9598 19.1406 6.9598C17.1106 6.9598 16.0086 8.1778 15.1386 9.1638L14.5006 9.9178L13.8626 9.1638C12.9926 8.1778 11.8906 6.9598 9.86062 6.9598Z"
+                                            fill="black" />
+                                    </svg>
+                                    <p class="black1 poppins small3 fst-normal fw-light lineHeight125 mb-0">Wishlist</p>
+                                </div>
+                            </div>
+                            <div class="share position-relative mt-5">
+                                <div class="d-flex align-items-center justify-content-between width-300">
+                                    <a href=""><img src="/assets/images/share.png" alt="share logo"></a>
+                                    <a href="https://www.facebook.com/" target="_blank"><img
+                                            src="/assets/images/facebook.png" alt="facebook logo"></a>
+                                    <a href="https://twitter.com/i/flow/login?input_flow_data=%7B%22requested_variant%22%3A%22eyJsYW5nIjoiZW4ifQ%3D%3D%22%7D"
+                                        target="_blank"><img src="/assets/images/twitter.png" alt="twitter"></a>
+                                    <a href="https://in.pinterest.com/" target="_blank"><img
+                                            src="/assets/images/pininterest.png" alt="pinterest logo"></a>
+                                    <a href="https://www.google.com/webhp?hl=en&sa=X&ved=0ahUKEwix0cS65duBAxUUxTgGHdLdBg0QPAgJ"
+                                        target="_blank"><img src="/assets/images/google.png" alt="google logo"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="col-xl-6 col-12">
-                <div class="ps-38">
-                    <div>
-                        <h1 class="text-black poppins large3 fst-normal fw-semibold lineHeightNormal mb-3">PREMIUM MENS
-                            SPORTS
-                            LATHER KEDS</h1>
-                        <div class="d-flex align-items-center gap-2 mb-3 mb-md-4">
-                            <img src="/assets/images/stars.png" alt="stars">
-                            <p class="black2 poppins medium2 fst-normal fw-normal lineHeight134 mb-0">( 5 Customer
-                                Review )
-                            </p>
-                        </div>
-                        <p
-                            class="text-black poppins medium2 fst-normal fw-normal lineHeight185 opacity06 mt-1 max-width-610 mb-3 mb-md-5">
-                            Sed nec ultricies felis, vitae facilisis ipsum. Morbi id turpis euismod, rhoncus tortor
-                            quis,
-                            lobortis sapien. Sed
-                            imperdiet nulla in leo ullamcorper, in finibus elit porta. Sed eget congue neque, mattis
-                            finibus
-                            neque. In vel dolor ac
-                            augue pretium</p>
-                        <div class="mt-md-4 pt-md-3 d-flex align-items-center mb-3">
-                            <p class="text-black poppins medium2 fst-normal fw-medium lineHeight125 mb-0">Qty:</p>
-                            <div
-                                class="quantity quantitySize border-radius-21 px-4 d-flex justify-content-between align-items-center ms-4 me-3">
-                                <span
-                                    class="grey1 josefin medium2 fst-normal fw-normal lineHeight125 subtract pointer">-</span>
-                                <span class="grey1 josefin medium2 fst-normal fw-normal lineHeight125 number">1</span>
-                                <span
-                                    class="grey1 josefin medium2 fst-normal fw-normal lineHeight125 add pointer">+</span>
-                            </div>
-                            <button class="cart border-radius-21 poppins medium2 fst-normal fw-medium lineHeight125">Add
-                                to
-                                Cart</button>
-                        </div>
-                        <div class="mt-1 d-flex align-items-center gap-3 mb-3">
-                            <label for="size"
-                                class="text-black poppins medium2 fst-normal fw-medium lineHeight125 mb-0">Size:</label
-                                for="size">
-                            <div
-                                class="quantitySize border-radius-21 size d-flex align-items-center justify-content-center">
-                                <select id="size" class="width-85 border-0 pointer">
-                                    <option value="small">S</option>
-                                    <option value="medium">M</option>
-                                    <option value="large">L</option>
-                                    <option value="extra-large">XL</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="mt-1 d-flex gap-4 align-items-center">
-                            <p class="text-black poppins medium2 fst-normal fw-medium lineHeight125 mb-0">Color:</p>
-                            <div class="d-flex align-items-center gap-1">
-                                <div class="colorBox pointer">
-                                    <div class="bg-red innerColorBox"></div>
-                                </div>
-                                <div class="colorBox pointer">
-                                    <div class="bg-brown innerColorBox"></div>
-                                </div>
-                                <div class="colorBox pointer">
-                                    <div class="bg-black4 innerColorBox"></div>
-                                </div>
-                                <div class="colorBox pointer">
-                                    <div class="bg-grey2 innerColorBox"></div>
+        </header>
+        <main class="container">
+            <!-- section1 -->
+            <section class="mb-md-5 mb-4">
+                <h2 id="sneaker" class="text-black poppins large2 fst-normal fw-medium lineHeight125 mb-md-4 mb-3">You
+                    can
+                    buy the Nike
+                    Air Max 97 Men's Shoe - White here:</h2>
+                <div class="mt-md-3 d-flex flex-wrap gap-xl-0 row-gap-md-4 row-gap-3 mb-md-5 mb-4">
+                    <div class="col-xl-3 col-md-6 col-12">
+                        <div class="d-flex justify-content-xl-start justify-content-center">
+                            <div class="section1Box bg-white position-relative">
+                                <div class="opacity02 section1Layer position-absolute w-100 h-100"></div>
+                                <div class="d-flex flex-column h-100 position-relative">
+                                    <div class="section1Logo d-flex align-items-center justify-content-center">
+                                        <img src="/assets/images/foot-locker.png" alt="foot locker logo">
+                                    </div>
+                                    <div class="flex-grow-1 bottom-container">
+                                        <div class="d-flex align-items-center justify-content-between mb-3">
+                                            <div
+                                                class="text-black poppins medium2 fst-normal fw-semibold lineHeight125">
+                                                <span
+                                                    class="text-black poppins small3 fst-normal fw-normal lineHeight125 opacity08 me-3">Price:</span>€179,99
+                                            </div>
+                                            <div
+                                                class="bestPrice text-white poppins small1 fst-normal fw-normal lineHeight125 text-center">
+                                                Best Price</div>
+                                        </div>
+                                        <p
+                                            class="text-black poppins small3 fst-normal fw-normal lineHeight125 opacity08 mb-2">
+                                            Size:</p>
+                                        <div class="mt-2 mb-2 d-flex align-items-center justify-content-between">
+                                            <div
+                                                class="bootsize black6 poppins small3 fst-normal fw-medium lineHeight125 d-flex align-items-center justify-content-center">
+                                                41</div>
+                                            <div
+                                                class="bootsize black6 poppins small3 fst-normal fw-medium lineHeight125 d-flex align-items-center justify-content-center">
+                                                42</div>
+                                            <div
+                                                class="bootsize black6 poppins small3 fst-normal fw-medium lineHeight125 d-flex align-items-center justify-content-center">
+                                                43</div>
+                                        </div>
+                                        <div class="mt-1 mb-3 d-flex align-items-center justify-content-between">
+                                            <div
+                                                class="bootsize black6 poppins small3 fst-normal fw-medium lineHeight125 d-flex align-items-center justify-content-center">
+                                                44</div>
+                                            <div
+                                                class="bootsize black6 poppins small3 fst-normal fw-medium lineHeight125 d-flex align-items-center justify-content-center">
+                                                45</div>
+                                            <div
+                                                class="bootsize black6 poppins small3 fst-normal fw-medium lineHeight125 d-flex align-items-center justify-content-center">
+                                                46</div>
+                                        </div>
+                                        <p class="green2 poppins small3 fst-normal fw-normal lineHeight125 mb-2">View
+                                            this
+                                            product as:</p>
+                                        <p class="blue poppins small3 fst-normal fw-semibold lineHeight125 mb-0">Foot
+                                            Locker
+                                            NL</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="d-flex gap-4 align-items-center mt-3 mt-md-4 mb-1">
-                            <div class="d-flex align-items-center">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path opacity="0.6"
-                                        d="M6.00977 2C4.07977 2 2.50977 3.57 2.50977 5.5C2.50977 7.08 3.56977 8.403 5.00977 8.837V15.997C5.00877 16.176 5.03677 17.778 6.18377 18.928C6.89177 19.64 7.83977 20 8.99977 20V22L12.9998 19L8.99977 16V18C7.17677 18 7.01577 16.466 7.00977 16V8.837C8.44977 8.403 9.50977 7.08 9.50977 5.5C9.50977 3.57 7.93877 2 6.00977 2ZM6.00977 7C5.18277 7 4.50977 6.327 4.50977 5.5C4.50977 4.673 5.18277 4 6.00977 4C6.83677 4 7.50977 4.673 7.50977 5.5C7.50977 6.327 6.83677 7 6.00977 7ZM19.0098 15.163V7.997C19.0048 6.391 17.9328 4 14.9998 4V2L10.9998 5L14.9998 8V6C16.8288 6 17.0008 7.539 17.0098 8V15.163C15.5698 15.597 14.5098 16.92 14.5098 18.5C14.5098 20.43 16.0798 22 18.0098 22C19.9398 22 21.5098 20.43 21.5098 18.5C21.5098 16.92 20.4498 15.597 19.0098 15.163ZM18.0098 20C17.1828 20 16.5098 19.327 16.5098 18.5C16.5098 17.673 17.1828 17 18.0098 17C18.8368 17 19.5098 17.673 19.5098 18.5C19.5098 19.327 18.8368 20 18.0098 20Z"
-                                        fill="black" />
-                                </svg>
-                                <p class="black1 poppins small3 fst-normal fw-light lineHeight125 mb-0">Compare</p>
-                            </div>
-                            <div class="d-flex align-items-center">
-                                <svg width="29" height="29" viewBox="0 0 29 29" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path opacity="0.6"
-                                        d="M14.5006 23.0258L14.1526 22.7358C6.67062 16.6458 4.64062 14.4998 4.64062 11.0198C4.64062 8.1198 6.96062 5.7998 9.86062 5.7998C12.2386 5.7998 13.5726 7.1338 14.5006 8.1778C15.4286 7.1338 16.7626 5.7998 19.1406 5.7998C22.0406 5.7998 24.3606 8.1198 24.3606 11.0198C24.3606 14.4998 22.3306 16.6458 14.8486 22.7358L14.5006 23.0258ZM9.86062 6.9598C7.59862 6.9598 5.80062 8.7578 5.80062 11.0198C5.80062 13.9778 7.65662 15.9498 14.5006 21.5178C21.3446 15.9498 23.2006 13.9778 23.2006 11.0198C23.2006 8.7578 21.4026 6.9598 19.1406 6.9598C17.1106 6.9598 16.0086 8.1778 15.1386 9.1638L14.5006 9.9178L13.8626 9.1638C12.9926 8.1778 11.8906 6.9598 9.86062 6.9598Z"
-                                        fill="black" />
-                                </svg>
-                                <p class="black1 poppins small3 fst-normal fw-light lineHeight125 mb-0">Wishlist</p>
+                    </div>
+                    <div class="col-xl-3 col-md-6 col-12">
+                        <div class="d-flex justify-content-center">
+                            <div class="section1Box bg-white position-relative">
+                                <div class="opacity02 section1Layer position-absolute w-100 h-100"></div>
+                                <div class="d-flex flex-column h-100 position-relative">
+                                    <div class="section1Logo d-flex align-items-center justify-content-center">
+                                        <img src="/assets/images/sidestep.png" alt="sidestep logo">
+                                    </div>
+                                    <div class="flex-grow-1 bottom-container">
+                                        <div class="d-flex align-items-center justify-content-between mb-3">
+                                            <div
+                                                class="text-black poppins medium2 fst-normal fw-semibold lineHeight125">
+                                                <span
+                                                    class="text-black poppins small3 fst-normal fw-normal lineHeight125 opacity08 me-3">Price:</span>€179,99
+                                            </div>
+                                            <div
+                                                class="bestPrice text-white poppins small1 fst-normal fw-normal lineHeight125 text-center">
+                                                Best Price</div>
+                                        </div>
+                                        <p
+                                            class="text-black poppins small3 fst-normal fw-normal lineHeight125 opacity08 mb-2">
+                                            Size:</p>
+                                        <div class="mt-2 mb-2 d-flex align-items-center justify-content-between">
+                                            <div
+                                                class="bootsize black6 poppins small3 fst-normal fw-medium lineHeight125 d-flex align-items-center justify-content-center">
+                                                41</div>
+                                            <div
+                                                class="bootsize black6 poppins small3 fst-normal fw-medium lineHeight125 d-flex align-items-center justify-content-center">
+                                                42</div>
+                                            <div
+                                                class="bootsize black6 poppins small3 fst-normal fw-medium lineHeight125 d-flex align-items-center justify-content-center">
+                                                43</div>
+                                        </div>
+                                        <div class="mt-1 mb-3 d-flex align-items-center justify-content-between">
+                                            <div
+                                                class="bootsize black6 poppins small3 fst-normal fw-medium lineHeight125 d-flex align-items-center justify-content-center">
+                                                44</div>
+                                            <div
+                                                class="bootsize black6 poppins small3 fst-normal fw-medium lineHeight125 d-flex align-items-center justify-content-center">
+                                                45</div>
+                                            <div
+                                                class="bootsize black6 poppins small3 fst-normal fw-medium lineHeight125 d-flex align-items-center justify-content-center">
+                                                46</div>
+                                        </div>
+                                        <p class="green2 poppins small3 fst-normal fw-normal lineHeight125 mb-2">View
+                                            this
+                                            product as:</p>
+                                        <p class="blue poppins small3 fst-normal fw-semibold lineHeight125 mb-0">Foot
+                                            Locker
+                                            NL</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <div class="share position-relative mt-5">
-                            <div class="d-flex align-items-center justify-content-between width-300">
-                                <a href=""><img src="/assets/images/share.png" alt="share logo"></a>
-                                <a href="https://www.facebook.com/" target="_blank"><img
-                                        src="/assets/images/facebook.png" alt="facebook logo"></a>
+                    </div>
+                    <div class="col-xl-3 col-md-6 col-12">
+                        <div class="d-flex justify-content-center">
+                            <div class="section1Box bg-white position-relative">
+                                <div class="opacity02 section1Layer position-absolute w-100 h-100"></div>
+                                <div class="d-flex flex-column h-100 position-relative">
+                                    <div class="section1Logo d-flex align-items-center justify-content-center">
+                                        <img src="/assets/images/foot-locker.png" alt="foot locker logo">
+                                    </div>
+                                    <div class="flex-grow-1 bottom-container">
+                                        <div class="d-flex align-items-center justify-content-between mb-3">
+                                            <div
+                                                class="text-black poppins medium2 fst-normal fw-semibold lineHeight125">
+                                                <span
+                                                    class="text-black poppins small3 fst-normal fw-normal lineHeight125 opacity08 me-3">Price:</span>€179,99
+                                            </div>
+                                            <div
+                                                class="bestPrice text-white poppins small1 fst-normal fw-normal lineHeight125 text-center">
+                                                Best Price</div>
+                                        </div>
+                                        <p
+                                            class="text-black poppins small3 fst-normal fw-normal lineHeight125 opacity08 mb-2">
+                                            Size:</p>
+                                        <div class="mt-2 mb-2 d-flex align-items-center justify-content-between">
+                                            <div
+                                                class="bootsize black6 poppins small3 fst-normal fw-medium lineHeight125 d-flex align-items-center justify-content-center">
+                                                41</div>
+                                            <div
+                                                class="bootsize black6 poppins small3 fst-normal fw-medium lineHeight125 d-flex align-items-center justify-content-center">
+                                                42</div>
+                                            <div
+                                                class="bootsize black6 poppins small3 fst-normal fw-medium lineHeight125 d-flex align-items-center justify-content-center">
+                                                43</div>
+                                        </div>
+                                        <div class="mt-1 mb-3 d-flex align-items-center justify-content-between">
+                                            <div
+                                                class="bootsize black6 poppins small3 fst-normal fw-medium lineHeight125 d-flex align-items-center justify-content-center">
+                                                44</div>
+                                            <div
+                                                class="bootsize black6 poppins small3 fst-normal fw-medium lineHeight125 d-flex align-items-center justify-content-center">
+                                                45</div>
+                                            <div
+                                                class="bootsize black6 poppins small3 fst-normal fw-medium lineHeight125 d-flex align-items-center justify-content-center">
+                                                46</div>
+                                        </div>
+                                        <p class="green2 poppins small3 fst-normal fw-normal lineHeight125 mb-2">View
+                                            this
+                                            product as:</p>
+                                        <p class="blue poppins small3 fst-normal fw-semibold lineHeight125 mb-0">Foot
+                                            Locker
+                                            NL</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-md-6 col-12">
+                        <div class="d-flex justify-content-xl-end  justify-content-center">
+                            <div class="section1Box bg-white position-relative">
+                                <div class="opacity02 section1Layer position-absolute w-100 h-100"></div>
+                                <div class="d-flex flex-column h-100 position-relative">
+                                    <div class="section1Logo d-flex align-items-center justify-content-center">
+                                        <img src="/assets/images/sidestep.png" alt="sidestep logo">
+                                    </div>
+                                    <div class="flex-grow-1 bottom-container">
+                                        <div class="d-flex align-items-center justify-content-between mb-3">
+                                            <div
+                                                class="text-black poppins medium2 fst-normal fw-semibold lineHeight125">
+                                                <span
+                                                    class="text-black poppins small3 fst-normal fw-normal lineHeight125 opacity08 me-3">Price:</span>€179,99
+                                            </div>
+                                            <div
+                                                class="bestPrice text-white poppins small1 fst-normal fw-normal lineHeight125 text-center">
+                                                Best Price</div>
+                                        </div>
+                                        <p
+                                            class="text-black poppins small3 fst-normal fw-normal lineHeight125 opacity08 mb-2">
+                                            Size:</p>
+                                        <div class="mt-2 mb-2 d-flex align-items-center justify-content-between">
+                                            <div
+                                                class="bootsize black6 poppins small3 fst-normal fw-medium lineHeight125 d-flex align-items-center justify-content-center">
+                                                41</div>
+                                            <div
+                                                class="bootsize black6 poppins small3 fst-normal fw-medium lineHeight125 d-flex align-items-center justify-content-center">
+                                                42</div>
+                                            <div
+                                                class="bootsize black6 poppins small3 fst-normal fw-medium lineHeight125 d-flex align-items-center justify-content-center">
+                                                43</div>
+                                        </div>
+                                        <div class="mt-1 mb-3 d-flex align-items-center justify-content-between">
+                                            <div
+                                                class="bootsize black6 poppins small3 fst-normal fw-medium lineHeight125 d-flex align-items-center justify-content-center">
+                                                44</div>
+                                            <div
+                                                class="bootsize black6 poppins small3 fst-normal fw-medium lineHeight125 d-flex align-items-center justify-content-center">
+                                                45</div>
+                                            <div
+                                                class="bootsize black6 poppins small3 fst-normal fw-medium lineHeight125 d-flex align-items-center justify-content-center">
+                                                46</div>
+                                        </div>
+                                        <p class="green2 poppins small3 fst-normal fw-normal lineHeight125 mb-2">View
+                                            this
+                                            product as:</p>
+                                        <p class="blue poppins small3 fst-normal fw-semibold lineHeight125 mb-0">Foot
+                                            Locker
+                                            NL</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- tab -->
+                <div
+                    class="width-674 d-flex gap-3 gap-md-0 flex-wrap justify-content-start align-items-center justify-content-md-between tab mb-md-4 mb-3 pb-1 mt-md-5">
+                    <span id="defaultOpen"
+                        class="poppins medium2 fst-normal fw-normal lineHeight125 tabLabel position-relative pointer"
+                        onclick="openTab(event, 'one')">DESCRIPTION</span>
+                    <span class="poppins medium2 fst-normal fw-normal lineHeight125 tabLabel position-relative pointer"
+                        onclick="openTab(event, 'two')">ADDITIONAL INFORMATION</span>
+                    <span class="poppins medium2 fst-normal fw-normal lineHeight125 tabLabel position-relative pointer"
+                        onclick="openTab(event, 'three')">REVIEWS (1)</span>
+                </div>
+                <div id="one"
+                    class="poppins medium2 fst-normal fw-normal lineHeight185 opacity07 tabContent min-height-148">Sed
+                    nec
+                    ultricies
+                    felis, vitae facilisis ipsum. Morbi id turpis euismod, rhoncus tortor quis, lobortis
+                    sapien. Sed
+                    imperdiet nulla in leo ullamcorper, in finibus elit porta. Sed eget congue neque, mattis finibus
+                    neque.
+                    In
+                    vel dolor ac
+                    augue pretium suscipit. Ut nec massa in ligula vestibulum mattis. Suspendisse imperdiet lorem
+                    eleifend
+                    nisi
+                    euismod, vel
+                    consequat ipsum luctus. Morbi auctor vulputate hendrerit. Etiam vel lectus tortor. Pellentesque non
+                    pharetra
+                    mi. Cura</div>
+                <div id="two"
+                    class="tabContent poppins medium2 fst-normal fw-normal lineHeight185 opacity07 min-height-148">Lorem
+                    ipsum
+                    dolor
+                    sit amet consectetur adipisicing elit. Laboriosam nulla
+                    officiis facere et
+                    quod enim accusantium! Ut, qui vel, quo rem adipisci ratione quos reiciendis laborum mollitia
+                    repellat
+                    eos
+                    repudiandae!</div>
+                <div id="three"
+                    class="tabContent poppins medium2 fst-normal fw-normal lineHeight185 opacity07 min-height-148">Lorem
+                    ipsum
+                    dolor sit amet consectetur, adipisicing elit. Voluptates unde
+                    id at ut. Tenetur
+                    illo assumenda omnis atque ratione nihil laudantium, consequatur ipsa, corrupti rem enim nostrum
+                    debitis
+                    commodi reiciendis?Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem mollitia id
+                    dolore
+                    illum
+                    enim esse, voluptas laudantium inventore ab, quia unde natus quidem explicabo voluptate odio
+                    voluptatem
+                    quis
+                    consequuntur sit!</div>
+            </section>
+            <!-- section2 -->
+            <section class="mt-md-5 pb-md-5 pb-2">
+                <h2 id="sale" class="text-black poppins large3 fst-normal fw-semibold lineHeightNormal mb-md-4 mb-3">
+                    RELATED
+                    PRODUCT
+                </h2>
+                <div class="d-flex flex-wrap shoe-gallery-row-gap mt-md-2 pt-md-1">
+                    <div class="col-xl-3 col-md-6 col-12 d-flex flex-column align-items-center">
+                        <div class="section2Box bg-white border-radius-17 d-flex flex-column">
+                            <div class="position-relative overflow-hidden">
+                                <img class="border-radius-17 w-100" src="/assets/images/section2redshoe.png"
+                                    alt="red shoe">
+                                <div
+                                    class="off text-white poppins small2 fst-normal fw-light lineHeight34 d-flex align-items-center justify-content-center position-absolute">
+                                    -10% OFF</div>
+                                <div
+                                    class="new text-white poppins small2 fst-normal fw-normal lineHeight34 d-flex align-items-center justify-content-center position-absolute">
+                                    NEW</div>
+                            </div>
+                            <div class="flex-grow-1 section2box2 position-relative">
+                                <p class="grey1 poppins medium1 fst-normal fw-medium lineHeight34 mb-1">Quickiins Mens
+                                    Shoes
+                                </p>
+                                <div class="d-flex gap-1 mb-3">
+                                    <p class="grey4 poppins medium1 fst-normal fw-medium lineHeight34 mb-0">$90.00</p>
+                                    <p class="red2 poppins medium1 fst-normal fw-medium lineHeight34 mb-0">$70.00</p>
+                                </div>
+                                <img src="/assets/images/rating.png" alt="product rating">
+                                <img class="position-absolute cart2" src="/assets/images/cart.png" alt="cart image">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-md-6 col-12 d-flex flex-column align-items-center">
+                        <div class="section2Box bg-white border-radius-17 d-flex flex-column">
+                            <div class="position-relative overflow-hidden">
+                                <img class="border-radius-17 w-100" src="/assets/images/section2greyshoe.png"
+                                    alt="grey shoe">
+                                <div
+                                    class="off text-white poppins small2 fst-normal fw-light lineHeight34 d-flex align-items-center justify-content-center position-absolute">
+                                    -10% OFF</div>
+                                <div
+                                    class="new text-white poppins small2 fst-normal fw-normal lineHeight34 d-flex align-items-center justify-content-center position-absolute">
+                                    NEW</div>
+                            </div>
+                            <div class="flex-grow-1 section2box2 position-relative">
+                                <p class="grey1 poppins medium1 fst-normal fw-medium lineHeight34 mb-1">Quickiins Mens
+                                    Shoes
+                                </p>
+                                <div class="d-flex gap-1 mb-3">
+                                    <p class="grey4 poppins medium1 fst-normal fw-medium lineHeight34 mb-0">$90.00</p>
+                                    <p class="red2 poppins medium1 fst-normal fw-medium lineHeight34 mb-0">$70.00</p>
+                                </div>
+                                <img src="/assets/images/rating.png" alt="product rating">
+                                <img class="position-absolute cart2" src="/assets/images/cart.png" alt="cart image">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-md-6 col-12 d-flex flex-column align-items-center">
+                        <div class="section2Box bg-white border-radius-17 d-flex flex-column">
+                            <div class="position-relative overflow-hidden">
+                                <img class="border-radius-17 w-100" src="/assets/images/section2redshoe.png"
+                                    alt="red shoe">
+                                <div
+                                    class="off text-white poppins small2 fst-normal fw-light lineHeight34 d-flex align-items-center justify-content-center position-absolute">
+                                    -10% OFF</div>
+                                <div
+                                    class="new text-white poppins small2 fst-normal fw-normal lineHeight34 d-flex align-items-center justify-content-center position-absolute">
+                                    NEW</div>
+                            </div>
+                            <div class="flex-grow-1 section2box2 position-relative">
+                                <p class="grey1 poppins medium1 fst-normal fw-medium lineHeight34 mb-1">Quickiins Mens
+                                    Shoes
+                                </p>
+                                <div class="d-flex gap-1 mb-3">
+                                    <p class="grey4 poppins medium1 fst-normal fw-medium lineHeight34 mb-0">$90.00</p>
+                                    <p class="red2 poppins medium1 fst-normal fw-medium lineHeight34 mb-0">$70.00</p>
+                                </div>
+                                <img src="/assets/images/rating.png" alt="product rating">
+                                <img class="position-absolute cart2" src="/assets/images/cart.png" alt="cart image">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-md-6 col-12 d-flex flex-column align-items-center">
+                        <div class="section2Box bg-white border-radius-17 d-flex flex-column">
+                            <div class="position-relative overflow-hidden">
+                                <img class="border-radius-17 w-100" src="/assets/images/section2greyshoe.png"
+                                    alt="grey shoe">
+                                <div
+                                    class="off text-white poppins small2 fst-normal fw-light lineHeight34 d-flex align-items-center justify-content-center position-absolute">
+                                    -10% OFF</div>
+                                <div
+                                    class="new text-white poppins small2 fst-normal fw-normal lineHeight34 d-flex align-items-center justify-content-center position-absolute">
+                                    NEW</div>
+                            </div>
+                            <div class="flex-grow-1 section2box2 position-relative">
+                                <p class="grey1 poppins medium1 fst-normal fw-medium lineHeight34 mb-1">Quickiins Mens
+                                    Shoes
+                                </p>
+                                <div class="d-flex gap-1 mb-3">
+                                    <p class="grey4 poppins medium1 fst-normal fw-medium lineHeight34 mb-0">$90.00</p>
+                                    <p class="red2 poppins medium1 fst-normal fw-medium lineHeight34 mb-0">$70.00</p>
+                                </div>
+                                <img src="/assets/images/rating.png" alt="product rating">
+                                <img class="position-absolute cart2" src="/assets/images/cart.png" alt="cart image">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-md-6 col-12 d-flex flex-column align-items-center">
+                        <div class="section2Box bg-white border-radius-17 d-flex flex-column">
+                            <div class="position-relative overflow-hidden">
+                                <img class="border-radius-17 w-100" src="/assets/images/section2redshoe.png"
+                                    alt="red shoe">
+                                <div
+                                    class="off text-white poppins small2 fst-normal fw-light lineHeight34 d-flex align-items-center justify-content-center position-absolute">
+                                    -10% OFF</div>
+                                <div
+                                    class="new text-white poppins small2 fst-normal fw-normal lineHeight34 d-flex align-items-center justify-content-center position-absolute">
+                                    NEW</div>
+                            </div>
+                            <div class="flex-grow-1 section2box2 position-relative">
+                                <p class="grey1 poppins medium1 fst-normal fw-medium lineHeight34 mb-1">Quickiins Mens
+                                    Shoes
+                                </p>
+                                <div class="d-flex gap-1 mb-3">
+                                    <p class="grey4 poppins medium1 fst-normal fw-medium lineHeight34 mb-0">$90.00</p>
+                                    <p class="red2 poppins medium1 fst-normal fw-medium lineHeight34 mb-0">$70.00</p>
+                                </div>
+                                <img src="/assets/images/rating.png" alt="product rating">
+                                <img class="position-absolute cart2" src="/assets/images/cart.png" alt="cart image">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-md-6 col-12 d-flex flex-column align-items-center">
+                        <div class="section2Box bg-white border-radius-17 d-flex flex-column">
+                            <div class="position-relative overflow-hidden">
+                                <img class="border-radius-17 w-100" src="/assets/images/section2greyshoe.png"
+                                    alt="grey shoe">
+                                <div
+                                    class="off text-white poppins small2 fst-normal fw-light lineHeight34 d-flex align-items-center justify-content-center position-absolute">
+                                    -10% OFF</div>
+                                <div
+                                    class="new text-white poppins small2 fst-normal fw-normal lineHeight34 d-flex align-items-center justify-content-center position-absolute">
+                                    NEW</div>
+                            </div>
+                            <div class="flex-grow-1 section2box2 position-relative">
+                                <p class="grey1 poppins medium1 fst-normal fw-medium lineHeight34 mb-1">Quickiins Mens
+                                    Shoes
+                                </p>
+                                <div class="d-flex gap-1 mb-3">
+                                    <p class="grey4 poppins medium1 fst-normal fw-medium lineHeight34 mb-0">$90.00</p>
+                                    <p class="red2 poppins medium1 fst-normal fw-medium lineHeight34 mb-0">$70.00</p>
+                                </div>
+                                <img src="/assets/images/rating.png" alt="product rating">
+                                <img class="position-absolute cart2" src="/assets/images/cart.png" alt="cart image">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-md-6 col-12 d-flex flex-column align-items-center">
+                        <div class="section2Box bg-white border-radius-17 d-flex flex-column">
+                            <div class="position-relative overflow-hidden">
+                                <img class="border-radius-17 w-100" src="/assets/images/section2redshoe.png"
+                                    alt="red shoe">
+                                <div
+                                    class="off text-white poppins small2 fst-normal fw-light lineHeight34 d-flex align-items-center justify-content-center position-absolute">
+                                    -10% OFF</div>
+                                <div
+                                    class="new text-white poppins small2 fst-normal fw-normal lineHeight34 d-flex align-items-center justify-content-center position-absolute">
+                                    NEW</div>
+                            </div>
+                            <div class="flex-grow-1 section2box2 position-relative">
+                                <p class="grey1 poppins medium1 fst-normal fw-medium lineHeight34 mb-1">Quickiins Mens
+                                    Shoes
+                                </p>
+                                <div class="d-flex gap-1 mb-3">
+                                    <p class="grey4 poppins medium1 fst-normal fw-medium lineHeight34 mb-0">$90.00</p>
+                                    <p class="red2 poppins medium1 fst-normal fw-medium lineHeight34 mb-0">$70.00</p>
+                                </div>
+                                <img src="/assets/images/rating.png" alt="product rating">
+                                <img class="position-absolute cart2" src="/assets/images/cart.png" alt="cart image">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-md-6 col-12 d-flex flex-column align-items-center">
+                        <div class="section2Box bg-white border-radius-17 d-flex flex-column">
+                            <div class="position-relative overflow-hidden">
+                                <img class="border-radius-17 w-100" src="/assets/images/section2greyshoe.png"
+                                    alt="grey shoe">
+                                <div
+                                    class="off text-white poppins small2 fst-normal fw-light lineHeight34 d-flex align-items-center justify-content-center position-absolute">
+                                    -10% OFF</div>
+                                <div
+                                    class="new text-white poppins small2 fst-normal fw-normal lineHeight34 d-flex align-items-center justify-content-center position-absolute">
+                                    NEW</div>
+                            </div>
+                            <div class="flex-grow-1 section2box2 position-relative">
+                                <p class="grey1 poppins medium1 fst-normal fw-medium lineHeight34 mb-1">Quickiins Mens
+                                    Shoes
+                                </p>
+                                <div class="d-flex gap-1 mb-3">
+                                    <p class="grey4 poppins medium1 fst-normal fw-medium lineHeight34 mb-0">$90.00</p>
+                                    <p class="red2 poppins medium1 fst-normal fw-medium lineHeight34 mb-0">$70.00</p>
+                                </div>
+                                <img src="/assets/images/rating.png" alt="product rating">
+                                <img class="position-absolute cart2" src="/assets/images/cart.png" alt="cart image">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-3 mt-md-5 pt-md-4 d-flex align-items-center justify-content-end gap-3 mb-md-5 pb-md-5">
+                    <div class="d-flex gap-2">
+                        <div
+                            class="pageBtn pageBtnActive poppins large1 fst-normal fw-semibold lineHeight125 d-flex align-items-center justify-content-center pointer">
+                            1</div>
+                        <div
+                            class="pageBtn pageBtn2 poppins large1 fst-normal fw-semibold lineHeight125 d-flex align-items-center justify-content-center pointer">
+                            2</div>
+                    </div>
+                    <div
+                        class="pageBtn pageBtn2 poppins large1 fst-normal fw-semibold lineHeight125 d-flex align-items-center justify-content-center pointer">
+                        3</div>
+                    <div
+                        class="next poppins small3 fst-normal fw-normal lineHeightNormal d-flex align-items-center justify-content-center pointer">
+                        Next >></div>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <div class="bg-black min-height-363">
+                <div class="d-flex flex-column container">
+                    <div id="interview">
+                        <a href=""><img class="pt-4 mt-1 footerLogo" src="/assets/images/footerlogo.png"
+                                alt="footer logo"></a>
+                    </div>
+                    <div class="container d-flex flex-wrap">
+                        <div class="col-md-5 col-12">
+                            <p
+                                class="mb-md-4 pb-3 mb-0 text-white poppins small3 fst-normal fw-normal lineHeight185 opacity06 max-width-448">
+                                Sed nec ultricies felis, vitae facilisis ipsum. Morbi id turpis euismod, rhoncus tortor
+                                quis,
+                                lobortis sapien. Sed
+                                imperdiet nulla in leo ullamcorper, in finibus elit porta.</p>
+                            <div class="d-flex align-items-center gap-20">
+                                <a href="https://www.facebook.com/" target="_blank">
+                                    <svg width="35" height="35" viewBox="0 0 35 35" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M2.89746 17.4679C2.89746 24.6714 8.12925 30.6614 14.9717 31.8761V21.4113H11.3495V17.387H14.9717V14.1668C14.9717 10.5445 17.3057 8.53289 20.6068 8.53289C21.6524 8.53289 22.7802 8.69348 23.8258 8.85407V12.5573H21.9748C20.2035 12.5573 19.8015 13.4423 19.8015 14.57V17.387H23.6652L23.0217 21.4113H19.8015V31.8761C26.6439 30.6614 31.8757 24.6726 31.8757 17.4679C31.8757 9.45416 25.3556 2.89783 17.3866 2.89783C9.41757 2.89783 2.89746 9.45416 2.89746 17.4679Z"
+                                            fill="white" />
+                                    </svg></a>
                                 <a href="https://twitter.com/i/flow/login?input_flow_data=%7B%22requested_variant%22%3A%22eyJsYW5nIjoiZW4ifQ%3D%3D%22%7D"
-                                    target="_blank"><img src="/assets/images/twitter.png" alt="twitter"></a>
-                                <a href="https://in.pinterest.com/" target="_blank"><img
-                                        src="/assets/images/pininterest.png" alt="pinterest logo"></a>
-                                <a href="https://www.google.com/webhp?hl=en&sa=X&ved=0ahUKEwix0cS65duBAxUUxTgGHdLdBg0QPAgJ"
-                                    target="_blank"><img src="/assets/images/google.png" alt="google logo"></a>
+                                    target="_blank">
+                                    <svg width="36" height="35" viewBox="0 0 36 35" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M18.1609 2.17334C9.75942 2.17334 2.94727 8.9855 2.94727 17.3869C2.94727 25.7884 9.75942 32.6005 18.1609 32.6005C26.5623 32.6005 33.3745 25.7884 33.3745 17.3869C33.3745 8.9855 26.5623 2.17334 18.1609 2.17334ZM25.4722 13.6413C25.4824 13.8009 25.4824 13.9673 25.4824 14.1303C25.4824 19.1154 21.6858 24.8579 14.748 24.8579C12.6086 24.8579 10.6254 24.2364 8.9546 23.1667C9.26023 23.2007 9.55227 23.2143 9.8647 23.2143C11.6306 23.2143 13.2538 22.6166 14.5476 21.6046C12.8904 21.5707 11.4981 20.484 11.0227 18.9898C11.6034 19.0747 12.1264 19.0747 12.724 18.9219C11.8707 18.7485 11.1038 18.2851 10.5534 17.6103C10.0031 16.9356 9.70335 16.0911 9.70509 15.2204V15.1728C10.2043 15.4547 10.7918 15.6279 11.4064 15.6516C10.8897 15.3073 10.466 14.8407 10.1727 14.2934C9.87952 13.746 9.72588 13.1348 9.72546 12.5138C9.72546 11.8109 9.90884 11.1691 10.2382 10.6121C11.1854 11.7781 12.3672 12.7316 13.707 13.4109C15.0468 14.0902 16.5146 14.4799 18.0148 14.5548C17.4817 11.9909 19.397 9.91597 21.6994 9.91597C22.7861 9.91597 23.7641 10.371 24.4534 11.1045C25.3058 10.9449 26.1208 10.6257 26.8475 10.1978C26.5657 11.0706 25.9748 11.8075 25.1904 12.2727C25.951 12.1912 26.6845 11.9807 27.3637 11.6852C26.8509 12.4391 26.2091 13.1081 25.4722 13.6413Z"
+                                            fill="white" />
+                                    </svg>
+                                </a>
+                                <a href="https://www.google.com/" target="_blank">
+                                    <svg width="31" height="31" viewBox="0 0 31 31" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M15.3874 0.17334C6.98599 0.17334 0.173828 6.9855 0.173828 15.3869C0.173828 23.7884 6.98599 30.6005 15.3874 30.6005C23.7889 30.6005 30.601 23.7884 30.601 15.3869C30.601 6.9855 23.7889 0.17334 15.3874 0.17334ZM16.6269 19.1496C15.1361 21.2482 12.1409 21.8595 9.80458 20.9596C7.46141 20.0665 5.79742 17.5909 5.99778 15.0677C6.04872 11.9809 8.89108 9.27433 11.9779 9.3796C13.4586 9.31168 14.8509 9.95351 15.9851 10.8602C15.4995 11.4103 15.0003 11.9401 14.4637 12.4325C13.102 11.4918 11.1629 11.2236 9.80118 12.3103C7.85194 13.6584 7.76365 16.8404 9.63818 18.2904C11.4618 19.9442 14.9086 19.1224 15.4146 16.5891C14.2736 16.5721 13.1258 16.5891 11.9847 16.5517C11.9813 15.8691 11.9779 15.19 11.9813 14.5074C13.8898 14.5006 15.8017 14.4972 17.7136 14.5142C17.8257 16.1204 17.6117 17.8252 16.6269 19.1496ZM24.862 16.2189C24.2914 16.2257 23.7209 16.2291 23.1504 16.2325C23.1436 16.803 23.1402 17.3735 23.1402 17.944H21.4321C21.4253 17.3735 21.4253 16.8064 21.4219 16.2359C20.8514 16.2291 20.2809 16.2257 19.7104 16.2189V14.5176C20.2809 14.5108 20.8514 14.5074 21.4219 14.5074C21.4253 13.9369 21.4321 13.3664 21.4355 12.7959H23.1402L23.1504 14.5074C23.7209 14.5142 24.2914 14.5142 24.862 14.5176V16.2189Z"
+                                            fill="white" />
+                                    </svg>
+                                </a>
                             </div>
                         </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </header>
-    <main class="container">
-        <!-- section1 -->
-        <section class="mb-md-5 mb-4">
-            <h2 id="sneaker" class="text-black poppins large2 fst-normal fw-medium lineHeight125 mb-md-4 mb-3">You can
-                buy the Nike
-                Air Max 97 Men's Shoe - White here:</h2>
-            <div class="mt-md-3 d-flex flex-wrap gap-xl-0 row-gap-md-4 row-gap-3 mb-md-5 mb-4">
-                <div class="col-xl-3 col-md-6 col-12">
-                    <div class="d-flex justify-content-xl-start justify-content-center">
-                        <div class="section1Box bg-white position-relative">
-                            <div class="opacity02 section1Layer position-absolute w-100 h-100"></div>
-                            <div class="d-flex flex-column h-100 position-relative">
-                                <div class="section1Logo d-flex align-items-center justify-content-center">
-                                    <img src="/assets/images/foot-locker.png" alt="foot locker logo">
-                                </div>
-                                <div class="flex-grow-1 bottom-container">
-                                    <div class="d-flex align-items-center justify-content-between mb-3">
-                                        <div class="text-black poppins medium2 fst-normal fw-semibold lineHeight125">
-                                            <span
-                                                class="text-black poppins small3 fst-normal fw-normal lineHeight125 opacity08 me-3">Price:</span>€179,99
-                                        </div>
-                                        <div
-                                            class="bestPrice text-white poppins small1 fst-normal fw-normal lineHeight125 text-center">
-                                            Best Price</div>
-                                    </div>
-                                    <p
-                                        class="text-black poppins small3 fst-normal fw-normal lineHeight125 opacity08 mb-2">
-                                        Size:</p>
-                                    <div class="mt-2 mb-2 d-flex align-items-center justify-content-between">
-                                        <div
-                                            class="bootsize black6 poppins small3 fst-normal fw-medium lineHeight125 d-flex align-items-center justify-content-center">
-                                            41</div>
-                                        <div
-                                            class="bootsize black6 poppins small3 fst-normal fw-medium lineHeight125 d-flex align-items-center justify-content-center">
-                                            42</div>
-                                        <div
-                                            class="bootsize black6 poppins small3 fst-normal fw-medium lineHeight125 d-flex align-items-center justify-content-center">
-                                            43</div>
-                                    </div>
-                                    <div class="mt-1 mb-3 d-flex align-items-center justify-content-between">
-                                        <div
-                                            class="bootsize black6 poppins small3 fst-normal fw-medium lineHeight125 d-flex align-items-center justify-content-center">
-                                            44</div>
-                                        <div
-                                            class="bootsize black6 poppins small3 fst-normal fw-medium lineHeight125 d-flex align-items-center justify-content-center">
-                                            45</div>
-                                        <div
-                                            class="bootsize black6 poppins small3 fst-normal fw-medium lineHeight125 d-flex align-items-center justify-content-center">
-                                            46</div>
-                                    </div>
-                                    <p class="green2 poppins small3 fst-normal fw-normal lineHeight125 mb-2">View this
-                                        product as:</p>
-                                    <p class="blue poppins small3 fst-normal fw-semibold lineHeight125 mb-0">Foot Locker
-                                        NL</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-3 col-md-6 col-12">
-                    <div class="d-flex justify-content-center">
-                        <div class="section1Box bg-white position-relative">
-                            <div class="opacity02 section1Layer position-absolute w-100 h-100"></div>
-                            <div class="d-flex flex-column h-100 position-relative">
-                                <div class="section1Logo d-flex align-items-center justify-content-center">
-                                    <img src="/assets/images/sidestep.png" alt="sidestep logo">
-                                </div>
-                                <div class="flex-grow-1 bottom-container">
-                                    <div class="d-flex align-items-center justify-content-between mb-3">
-                                        <div class="text-black poppins medium2 fst-normal fw-semibold lineHeight125">
-                                            <span
-                                                class="text-black poppins small3 fst-normal fw-normal lineHeight125 opacity08 me-3">Price:</span>€179,99
-                                        </div>
-                                        <div
-                                            class="bestPrice text-white poppins small1 fst-normal fw-normal lineHeight125 text-center">
-                                            Best Price</div>
-                                    </div>
-                                    <p
-                                        class="text-black poppins small3 fst-normal fw-normal lineHeight125 opacity08 mb-2">
-                                        Size:</p>
-                                    <div class="mt-2 mb-2 d-flex align-items-center justify-content-between">
-                                        <div
-                                            class="bootsize black6 poppins small3 fst-normal fw-medium lineHeight125 d-flex align-items-center justify-content-center">
-                                            41</div>
-                                        <div
-                                            class="bootsize black6 poppins small3 fst-normal fw-medium lineHeight125 d-flex align-items-center justify-content-center">
-                                            42</div>
-                                        <div
-                                            class="bootsize black6 poppins small3 fst-normal fw-medium lineHeight125 d-flex align-items-center justify-content-center">
-                                            43</div>
-                                    </div>
-                                    <div class="mt-1 mb-3 d-flex align-items-center justify-content-between">
-                                        <div
-                                            class="bootsize black6 poppins small3 fst-normal fw-medium lineHeight125 d-flex align-items-center justify-content-center">
-                                            44</div>
-                                        <div
-                                            class="bootsize black6 poppins small3 fst-normal fw-medium lineHeight125 d-flex align-items-center justify-content-center">
-                                            45</div>
-                                        <div
-                                            class="bootsize black6 poppins small3 fst-normal fw-medium lineHeight125 d-flex align-items-center justify-content-center">
-                                            46</div>
-                                    </div>
-                                    <p class="green2 poppins small3 fst-normal fw-normal lineHeight125 mb-2">View this
-                                        product as:</p>
-                                    <p class="blue poppins small3 fst-normal fw-semibold lineHeight125 mb-0">Foot Locker
-                                        NL</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-3 col-md-6 col-12">
-                    <div class="d-flex justify-content-center">
-                        <div class="section1Box bg-white position-relative">
-                            <div class="opacity02 section1Layer position-absolute w-100 h-100"></div>
-                            <div class="d-flex flex-column h-100 position-relative">
-                                <div class="section1Logo d-flex align-items-center justify-content-center">
-                                    <img src="/assets/images/foot-locker.png" alt="foot locker logo">
-                                </div>
-                                <div class="flex-grow-1 bottom-container">
-                                    <div class="d-flex align-items-center justify-content-between mb-3">
-                                        <div class="text-black poppins medium2 fst-normal fw-semibold lineHeight125">
-                                            <span
-                                                class="text-black poppins small3 fst-normal fw-normal lineHeight125 opacity08 me-3">Price:</span>€179,99
-                                        </div>
-                                        <div
-                                            class="bestPrice text-white poppins small1 fst-normal fw-normal lineHeight125 text-center">
-                                            Best Price</div>
-                                    </div>
-                                    <p
-                                        class="text-black poppins small3 fst-normal fw-normal lineHeight125 opacity08 mb-2">
-                                        Size:</p>
-                                    <div class="mt-2 mb-2 d-flex align-items-center justify-content-between">
-                                        <div
-                                            class="bootsize black6 poppins small3 fst-normal fw-medium lineHeight125 d-flex align-items-center justify-content-center">
-                                            41</div>
-                                        <div
-                                            class="bootsize black6 poppins small3 fst-normal fw-medium lineHeight125 d-flex align-items-center justify-content-center">
-                                            42</div>
-                                        <div
-                                            class="bootsize black6 poppins small3 fst-normal fw-medium lineHeight125 d-flex align-items-center justify-content-center">
-                                            43</div>
-                                    </div>
-                                    <div class="mt-1 mb-3 d-flex align-items-center justify-content-between">
-                                        <div
-                                            class="bootsize black6 poppins small3 fst-normal fw-medium lineHeight125 d-flex align-items-center justify-content-center">
-                                            44</div>
-                                        <div
-                                            class="bootsize black6 poppins small3 fst-normal fw-medium lineHeight125 d-flex align-items-center justify-content-center">
-                                            45</div>
-                                        <div
-                                            class="bootsize black6 poppins small3 fst-normal fw-medium lineHeight125 d-flex align-items-center justify-content-center">
-                                            46</div>
-                                    </div>
-                                    <p class="green2 poppins small3 fst-normal fw-normal lineHeight125 mb-2">View this
-                                        product as:</p>
-                                    <p class="blue poppins small3 fst-normal fw-semibold lineHeight125 mb-0">Foot Locker
-                                        NL</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-3 col-md-6 col-12">
-                    <div class="d-flex justify-content-xl-end  justify-content-center">
-                        <div class="section1Box bg-white position-relative">
-                            <div class="opacity02 section1Layer position-absolute w-100 h-100"></div>
-                            <div class="d-flex flex-column h-100 position-relative">
-                                <div class="section1Logo d-flex align-items-center justify-content-center">
-                                    <img src="/assets/images/sidestep.png" alt="sidestep logo">
-                                </div>
-                                <div class="flex-grow-1 bottom-container">
-                                    <div class="d-flex align-items-center justify-content-between mb-3">
-                                        <div class="text-black poppins medium2 fst-normal fw-semibold lineHeight125">
-                                            <span
-                                                class="text-black poppins small3 fst-normal fw-normal lineHeight125 opacity08 me-3">Price:</span>€179,99
-                                        </div>
-                                        <div
-                                            class="bestPrice text-white poppins small1 fst-normal fw-normal lineHeight125 text-center">
-                                            Best Price</div>
-                                    </div>
-                                    <p
-                                        class="text-black poppins small3 fst-normal fw-normal lineHeight125 opacity08 mb-2">
-                                        Size:</p>
-                                    <div class="mt-2 mb-2 d-flex align-items-center justify-content-between">
-                                        <div
-                                            class="bootsize black6 poppins small3 fst-normal fw-medium lineHeight125 d-flex align-items-center justify-content-center">
-                                            41</div>
-                                        <div
-                                            class="bootsize black6 poppins small3 fst-normal fw-medium lineHeight125 d-flex align-items-center justify-content-center">
-                                            42</div>
-                                        <div
-                                            class="bootsize black6 poppins small3 fst-normal fw-medium lineHeight125 d-flex align-items-center justify-content-center">
-                                            43</div>
-                                    </div>
-                                    <div class="mt-1 mb-3 d-flex align-items-center justify-content-between">
-                                        <div
-                                            class="bootsize black6 poppins small3 fst-normal fw-medium lineHeight125 d-flex align-items-center justify-content-center">
-                                            44</div>
-                                        <div
-                                            class="bootsize black6 poppins small3 fst-normal fw-medium lineHeight125 d-flex align-items-center justify-content-center">
-                                            45</div>
-                                        <div
-                                            class="bootsize black6 poppins small3 fst-normal fw-medium lineHeight125 d-flex align-items-center justify-content-center">
-                                            46</div>
-                                    </div>
-                                    <p class="green2 poppins small3 fst-normal fw-normal lineHeight125 mb-2">View this
-                                        product as:</p>
-                                    <p class="blue poppins small3 fst-normal fw-semibold lineHeight125 mb-0">Foot Locker
-                                        NL</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- tab -->
-            <div
-                class="width-674 d-flex gap-3 gap-md-0 flex-wrap justify-content-start align-items-center justify-content-md-between tab mb-md-4 mb-3 pb-1 mt-md-5">
-                <span id="defaultOpen"
-                    class="poppins medium2 fst-normal fw-normal lineHeight125 tabLabel position-relative pointer"
-                    onclick="openTab(event, 'one')">DESCRIPTION</span>
-                <span class="poppins medium2 fst-normal fw-normal lineHeight125 tabLabel position-relative pointer"
-                    onclick="openTab(event, 'two')">ADDITIONAL INFORMATION</span>
-                <span class="poppins medium2 fst-normal fw-normal lineHeight125 tabLabel position-relative pointer"
-                    onclick="openTab(event, 'three')">REVIEWS (1)</span>
-            </div>
-            <div id="one"
-                class="poppins medium2 fst-normal fw-normal lineHeight185 opacity07 tabContent min-height-148">Sed nec
-                ultricies
-                felis, vitae facilisis ipsum. Morbi id turpis euismod, rhoncus tortor quis, lobortis
-                sapien. Sed
-                imperdiet nulla in leo ullamcorper, in finibus elit porta. Sed eget congue neque, mattis finibus neque.
-                In
-                vel dolor ac
-                augue pretium suscipit. Ut nec massa in ligula vestibulum mattis. Suspendisse imperdiet lorem eleifend
-                nisi
-                euismod, vel
-                consequat ipsum luctus. Morbi auctor vulputate hendrerit. Etiam vel lectus tortor. Pellentesque non
-                pharetra
-                mi. Cura</div>
-            <div id="two"
-                class="tabContent poppins medium2 fst-normal fw-normal lineHeight185 opacity07 min-height-148">Lorem
-                ipsum
-                dolor
-                sit amet consectetur adipisicing elit. Laboriosam nulla
-                officiis facere et
-                quod enim accusantium! Ut, qui vel, quo rem adipisci ratione quos reiciendis laborum mollitia repellat
-                eos
-                repudiandae!</div>
-            <div id="three"
-                class="tabContent poppins medium2 fst-normal fw-normal lineHeight185 opacity07 min-height-148">Lorem
-                ipsum
-                dolor sit amet consectetur, adipisicing elit. Voluptates unde
-                id at ut. Tenetur
-                illo assumenda omnis atque ratione nihil laudantium, consequatur ipsa, corrupti rem enim nostrum debitis
-                commodi reiciendis?Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem mollitia id dolore
-                illum
-                enim esse, voluptas laudantium inventore ab, quia unde natus quidem explicabo voluptate odio voluptatem
-                quis
-                consequuntur sit!</div>
-        </section>
-        <!-- section2 -->
-        <section class="mt-md-5 pb-md-5 pb-2">
-            <h2 id="sale" class="text-black poppins large3 fst-normal fw-semibold lineHeightNormal mb-md-4 mb-3">RELATED
-                PRODUCT
-            </h2>
-            <div class="d-flex flex-wrap shoe-gallery-row-gap mt-md-2 pt-md-1">
-                <div class="col-xl-3 col-md-6 col-12 d-flex flex-column align-items-center">
-                    <div class="section2Box bg-white border-radius-17 d-flex flex-column">
-                        <div class="position-relative overflow-hidden">
-                            <img class="border-radius-17 w-100" src="/assets/images/section2redshoe.png" alt="red shoe">
-                            <div
-                                class="off text-white poppins small2 fst-normal fw-light lineHeight34 d-flex align-items-center justify-content-center position-absolute">
-                                -10% OFF</div>
-                            <div
-                                class="new text-white poppins small2 fst-normal fw-normal lineHeight34 d-flex align-items-center justify-content-center position-absolute">
-                                NEW</div>
-                        </div>
-                        <div class="flex-grow-1 section2box2 position-relative">
-                            <p class="grey1 poppins medium1 fst-normal fw-medium lineHeight34 mb-1">Quickiins Mens Shoes
-                            </p>
-                            <div class="d-flex gap-1 mb-3">
-                                <p class="grey4 poppins medium1 fst-normal fw-medium lineHeight34 mb-0">$90.00</p>
-                                <p class="red2 poppins medium1 fst-normal fw-medium lineHeight34 mb-0">$70.00</p>
-                            </div>
-                            <img src="/assets/images/rating.png" alt="product rating">
-                            <img class="position-absolute cart2" src="/assets/images/cart.png" alt="cart image">
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-3 col-md-6 col-12 d-flex flex-column align-items-center">
-                    <div class="section2Box bg-white border-radius-17 d-flex flex-column">
-                        <div class="position-relative overflow-hidden">
-                            <img class="border-radius-17 w-100" src="/assets/images/section2greyshoe.png"
-                                alt="grey shoe">
-                            <div
-                                class="off text-white poppins small2 fst-normal fw-light lineHeight34 d-flex align-items-center justify-content-center position-absolute">
-                                -10% OFF</div>
-                            <div
-                                class="new text-white poppins small2 fst-normal fw-normal lineHeight34 d-flex align-items-center justify-content-center position-absolute">
-                                NEW</div>
-                        </div>
-                        <div class="flex-grow-1 section2box2 position-relative">
-                            <p class="grey1 poppins medium1 fst-normal fw-medium lineHeight34 mb-1">Quickiins Mens Shoes
-                            </p>
-                            <div class="d-flex gap-1 mb-3">
-                                <p class="grey4 poppins medium1 fst-normal fw-medium lineHeight34 mb-0">$90.00</p>
-                                <p class="red2 poppins medium1 fst-normal fw-medium lineHeight34 mb-0">$70.00</p>
-                            </div>
-                            <img src="/assets/images/rating.png" alt="product rating">
-                            <img class="position-absolute cart2" src="/assets/images/cart.png" alt="cart image">
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-3 col-md-6 col-12 d-flex flex-column align-items-center">
-                    <div class="section2Box bg-white border-radius-17 d-flex flex-column">
-                        <div class="position-relative overflow-hidden">
-                            <img class="border-radius-17 w-100" src="/assets/images/section2redshoe.png" alt="red shoe">
-                            <div
-                                class="off text-white poppins small2 fst-normal fw-light lineHeight34 d-flex align-items-center justify-content-center position-absolute">
-                                -10% OFF</div>
-                            <div
-                                class="new text-white poppins small2 fst-normal fw-normal lineHeight34 d-flex align-items-center justify-content-center position-absolute">
-                                NEW</div>
-                        </div>
-                        <div class="flex-grow-1 section2box2 position-relative">
-                            <p class="grey1 poppins medium1 fst-normal fw-medium lineHeight34 mb-1">Quickiins Mens Shoes
-                            </p>
-                            <div class="d-flex gap-1 mb-3">
-                                <p class="grey4 poppins medium1 fst-normal fw-medium lineHeight34 mb-0">$90.00</p>
-                                <p class="red2 poppins medium1 fst-normal fw-medium lineHeight34 mb-0">$70.00</p>
-                            </div>
-                            <img src="/assets/images/rating.png" alt="product rating">
-                            <img class="position-absolute cart2" src="/assets/images/cart.png" alt="cart image">
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-3 col-md-6 col-12 d-flex flex-column align-items-center">
-                    <div class="section2Box bg-white border-radius-17 d-flex flex-column">
-                        <div class="position-relative overflow-hidden">
-                            <img class="border-radius-17 w-100" src="/assets/images/section2greyshoe.png"
-                                alt="grey shoe">
-                            <div
-                                class="off text-white poppins small2 fst-normal fw-light lineHeight34 d-flex align-items-center justify-content-center position-absolute">
-                                -10% OFF</div>
-                            <div
-                                class="new text-white poppins small2 fst-normal fw-normal lineHeight34 d-flex align-items-center justify-content-center position-absolute">
-                                NEW</div>
-                        </div>
-                        <div class="flex-grow-1 section2box2 position-relative">
-                            <p class="grey1 poppins medium1 fst-normal fw-medium lineHeight34 mb-1">Quickiins Mens Shoes
-                            </p>
-                            <div class="d-flex gap-1 mb-3">
-                                <p class="grey4 poppins medium1 fst-normal fw-medium lineHeight34 mb-0">$90.00</p>
-                                <p class="red2 poppins medium1 fst-normal fw-medium lineHeight34 mb-0">$70.00</p>
-                            </div>
-                            <img src="/assets/images/rating.png" alt="product rating">
-                            <img class="position-absolute cart2" src="/assets/images/cart.png" alt="cart image">
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-3 col-md-6 col-12 d-flex flex-column align-items-center">
-                    <div class="section2Box bg-white border-radius-17 d-flex flex-column">
-                        <div class="position-relative overflow-hidden">
-                            <img class="border-radius-17 w-100" src="/assets/images/section2redshoe.png" alt="red shoe">
-                            <div
-                                class="off text-white poppins small2 fst-normal fw-light lineHeight34 d-flex align-items-center justify-content-center position-absolute">
-                                -10% OFF</div>
-                            <div
-                                class="new text-white poppins small2 fst-normal fw-normal lineHeight34 d-flex align-items-center justify-content-center position-absolute">
-                                NEW</div>
-                        </div>
-                        <div class="flex-grow-1 section2box2 position-relative">
-                            <p class="grey1 poppins medium1 fst-normal fw-medium lineHeight34 mb-1">Quickiins Mens Shoes
-                            </p>
-                            <div class="d-flex gap-1 mb-3">
-                                <p class="grey4 poppins medium1 fst-normal fw-medium lineHeight34 mb-0">$90.00</p>
-                                <p class="red2 poppins medium1 fst-normal fw-medium lineHeight34 mb-0">$70.00</p>
-                            </div>
-                            <img src="/assets/images/rating.png" alt="product rating">
-                            <img class="position-absolute cart2" src="/assets/images/cart.png" alt="cart image">
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-3 col-md-6 col-12 d-flex flex-column align-items-center">
-                    <div class="section2Box bg-white border-radius-17 d-flex flex-column">
-                        <div class="position-relative overflow-hidden">
-                            <img class="border-radius-17 w-100" src="/assets/images/section2greyshoe.png"
-                                alt="grey shoe">
-                            <div
-                                class="off text-white poppins small2 fst-normal fw-light lineHeight34 d-flex align-items-center justify-content-center position-absolute">
-                                -10% OFF</div>
-                            <div
-                                class="new text-white poppins small2 fst-normal fw-normal lineHeight34 d-flex align-items-center justify-content-center position-absolute">
-                                NEW</div>
-                        </div>
-                        <div class="flex-grow-1 section2box2 position-relative">
-                            <p class="grey1 poppins medium1 fst-normal fw-medium lineHeight34 mb-1">Quickiins Mens Shoes
-                            </p>
-                            <div class="d-flex gap-1 mb-3">
-                                <p class="grey4 poppins medium1 fst-normal fw-medium lineHeight34 mb-0">$90.00</p>
-                                <p class="red2 poppins medium1 fst-normal fw-medium lineHeight34 mb-0">$70.00</p>
-                            </div>
-                            <img src="/assets/images/rating.png" alt="product rating">
-                            <img class="position-absolute cart2" src="/assets/images/cart.png" alt="cart image">
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-3 col-md-6 col-12 d-flex flex-column align-items-center">
-                    <div class="section2Box bg-white border-radius-17 d-flex flex-column">
-                        <div class="position-relative overflow-hidden">
-                            <img class="border-radius-17 w-100" src="/assets/images/section2redshoe.png" alt="red shoe">
-                            <div
-                                class="off text-white poppins small2 fst-normal fw-light lineHeight34 d-flex align-items-center justify-content-center position-absolute">
-                                -10% OFF</div>
-                            <div
-                                class="new text-white poppins small2 fst-normal fw-normal lineHeight34 d-flex align-items-center justify-content-center position-absolute">
-                                NEW</div>
-                        </div>
-                        <div class="flex-grow-1 section2box2 position-relative">
-                            <p class="grey1 poppins medium1 fst-normal fw-medium lineHeight34 mb-1">Quickiins Mens Shoes
-                            </p>
-                            <div class="d-flex gap-1 mb-3">
-                                <p class="grey4 poppins medium1 fst-normal fw-medium lineHeight34 mb-0">$90.00</p>
-                                <p class="red2 poppins medium1 fst-normal fw-medium lineHeight34 mb-0">$70.00</p>
-                            </div>
-                            <img src="/assets/images/rating.png" alt="product rating">
-                            <img class="position-absolute cart2" src="/assets/images/cart.png" alt="cart image">
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-3 col-md-6 col-12 d-flex flex-column align-items-center">
-                    <div class="section2Box bg-white border-radius-17 d-flex flex-column">
-                        <div class="position-relative overflow-hidden">
-                            <img class="border-radius-17 w-100" src="/assets/images/section2greyshoe.png"
-                                alt="grey shoe">
-                            <div
-                                class="off text-white poppins small2 fst-normal fw-light lineHeight34 d-flex align-items-center justify-content-center position-absolute">
-                                -10% OFF</div>
-                            <div
-                                class="new text-white poppins small2 fst-normal fw-normal lineHeight34 d-flex align-items-center justify-content-center position-absolute">
-                                NEW</div>
-                        </div>
-                        <div class="flex-grow-1 section2box2 position-relative">
-                            <p class="grey1 poppins medium1 fst-normal fw-medium lineHeight34 mb-1">Quickiins Mens Shoes
-                            </p>
-                            <div class="d-flex gap-1 mb-3">
-                                <p class="grey4 poppins medium1 fst-normal fw-medium lineHeight34 mb-0">$90.00</p>
-                                <p class="red2 poppins medium1 fst-normal fw-medium lineHeight34 mb-0">$70.00</p>
-                            </div>
-                            <img src="/assets/images/rating.png" alt="product rating">
-                            <img class="position-absolute cart2" src="/assets/images/cart.png" alt="cart image">
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="mt-3 mt-md-5 pt-md-4 d-flex align-items-center justify-content-end gap-3 mb-md-5 pb-md-5">
-                <div class="d-flex gap-2">
-                    <div
-                        class="pageBtn pageBtnActive poppins large1 fst-normal fw-semibold lineHeight125 d-flex align-items-center justify-content-center">
-                        1</div>
-                    <div
-                        class="pageBtn pageBtn2 poppins large1 fst-normal fw-semibold lineHeight125 d-flex align-items-center justify-content-center">
-                        2</div>
-                </div>
-                <div
-                    class="pageBtn pageBtn2 poppins large1 fst-normal fw-semibold lineHeight125 d-flex align-items-center justify-content-center">
-                    3</div>
-                <div
-                    class="next poppins small3 fst-normal fw-normal lineHeightNormal d-flex align-items-center justify-content-center">
-                    Next >></div>
-            </div>
-        </section>
-    </main>
-    <footer>
-        <div class="bg-black min-height-363">
-            <div class="d-flex flex-column container">
-                <div id="interview">
-                    <a href=""><img class="pt-4 mt-1 footerLogo" src="/assets/images/footerlogo.png"
-                            alt="footer logo"></a>
-                </div>
-                <div class="container d-flex flex-wrap">
-                    <div class="col-md-5 col-12">
-                        <p
-                            class="mb-md-4 pb-3 mb-0 text-white poppins small3 fst-normal fw-normal lineHeight185 opacity06 max-width-448">
-                            Sed nec ultricies felis, vitae facilisis ipsum. Morbi id turpis euismod, rhoncus tortor
-                            quis,
-                            lobortis sapien. Sed
-                            imperdiet nulla in leo ullamcorper, in finibus elit porta.</p>
-                        <div class="d-flex gap-20">
-                            <a href="https://www.facebook.com/" target="_blank">
-                                <svg width="35" height="35" viewBox="0 0 35 35" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path fill-rule="evenodd" clip-rule="evenodd"
-                                        d="M2.89746 17.4679C2.89746 24.6714 8.12925 30.6614 14.9717 31.8761V21.4113H11.3495V17.387H14.9717V14.1668C14.9717 10.5445 17.3057 8.53289 20.6068 8.53289C21.6524 8.53289 22.7802 8.69348 23.8258 8.85407V12.5573H21.9748C20.2035 12.5573 19.8015 13.4423 19.8015 14.57V17.387H23.6652L23.0217 21.4113H19.8015V31.8761C26.6439 30.6614 31.8757 24.6726 31.8757 17.4679C31.8757 9.45416 25.3556 2.89783 17.3866 2.89783C9.41757 2.89783 2.89746 9.45416 2.89746 17.4679Z"
-                                        fill="white" />
-                                </svg></a>
-                            <a href="https://twitter.com/i/flow/login?input_flow_data=%7B%22requested_variant%22%3A%22eyJsYW5nIjoiZW4ifQ%3D%3D%22%7D"
-                                target="_blank">
-                                <svg width="36" height="35" viewBox="0 0 36 35" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M18.1609 2.17334C9.75942 2.17334 2.94727 8.9855 2.94727 17.3869C2.94727 25.7884 9.75942 32.6005 18.1609 32.6005C26.5623 32.6005 33.3745 25.7884 33.3745 17.3869C33.3745 8.9855 26.5623 2.17334 18.1609 2.17334ZM25.4722 13.6413C25.4824 13.8009 25.4824 13.9673 25.4824 14.1303C25.4824 19.1154 21.6858 24.8579 14.748 24.8579C12.6086 24.8579 10.6254 24.2364 8.9546 23.1667C9.26023 23.2007 9.55227 23.2143 9.8647 23.2143C11.6306 23.2143 13.2538 22.6166 14.5476 21.6046C12.8904 21.5707 11.4981 20.484 11.0227 18.9898C11.6034 19.0747 12.1264 19.0747 12.724 18.9219C11.8707 18.7485 11.1038 18.2851 10.5534 17.6103C10.0031 16.9356 9.70335 16.0911 9.70509 15.2204V15.1728C10.2043 15.4547 10.7918 15.6279 11.4064 15.6516C10.8897 15.3073 10.466 14.8407 10.1727 14.2934C9.87952 13.746 9.72588 13.1348 9.72546 12.5138C9.72546 11.8109 9.90884 11.1691 10.2382 10.6121C11.1854 11.7781 12.3672 12.7316 13.707 13.4109C15.0468 14.0902 16.5146 14.4799 18.0148 14.5548C17.4817 11.9909 19.397 9.91597 21.6994 9.91597C22.7861 9.91597 23.7641 10.371 24.4534 11.1045C25.3058 10.9449 26.1208 10.6257 26.8475 10.1978C26.5657 11.0706 25.9748 11.8075 25.1904 12.2727C25.951 12.1912 26.6845 11.9807 27.3637 11.6852C26.8509 12.4391 26.2091 13.1081 25.4722 13.6413Z"
-                                        fill="white" />
-                                </svg>
-                            </a>
-                            <a href="https://www.google.com/" target="_blank">
-                                <svg width="31" height="31" viewBox="0 0 31 31" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M15.3874 0.17334C6.98599 0.17334 0.173828 6.9855 0.173828 15.3869C0.173828 23.7884 6.98599 30.6005 15.3874 30.6005C23.7889 30.6005 30.601 23.7884 30.601 15.3869C30.601 6.9855 23.7889 0.17334 15.3874 0.17334ZM16.6269 19.1496C15.1361 21.2482 12.1409 21.8595 9.80458 20.9596C7.46141 20.0665 5.79742 17.5909 5.99778 15.0677C6.04872 11.9809 8.89108 9.27433 11.9779 9.3796C13.4586 9.31168 14.8509 9.95351 15.9851 10.8602C15.4995 11.4103 15.0003 11.9401 14.4637 12.4325C13.102 11.4918 11.1629 11.2236 9.80118 12.3103C7.85194 13.6584 7.76365 16.8404 9.63818 18.2904C11.4618 19.9442 14.9086 19.1224 15.4146 16.5891C14.2736 16.5721 13.1258 16.5891 11.9847 16.5517C11.9813 15.8691 11.9779 15.19 11.9813 14.5074C13.8898 14.5006 15.8017 14.4972 17.7136 14.5142C17.8257 16.1204 17.6117 17.8252 16.6269 19.1496ZM24.862 16.2189C24.2914 16.2257 23.7209 16.2291 23.1504 16.2325C23.1436 16.803 23.1402 17.3735 23.1402 17.944H21.4321C21.4253 17.3735 21.4253 16.8064 21.4219 16.2359C20.8514 16.2291 20.2809 16.2257 19.7104 16.2189V14.5176C20.2809 14.5108 20.8514 14.5074 21.4219 14.5074C21.4253 13.9369 21.4321 13.3664 21.4355 12.7959H23.1402L23.1504 14.5074C23.7209 14.5142 24.2914 14.5142 24.862 14.5176V16.2189Z"
-                                        fill="white" />
-                                </svg>
-
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-md-7 col-12 d-flex justify-content-between flex-wrap mt-3 mt-md-0">
-                        <div class="col-xl-3 col-6 d-flex flex-column align-items-xl-start align-items-center">
-                            <div>
-                                <h3 class="text-white poppins medium1 fst-normal fw-semibold lineHeight150 mb-4">CUSTOM
-                                    LINKS
-                                </h3>
-                                <ul class="ps-0 d-flex flex-column gap-3">
-                                    <li
-                                        class="poppins medium1 fst-normal fw-normal lineHeight150 opacity07 underline position-relative">
-                                        <a href="" class="text-decoration-none text-white">
-                                        Lorem ipsum</a>
-                                    </li>
-                                    <li
-                                        class="poppins medium1 fst-normal fw-normal lineHeight150 opacity07 underline position-relative">
-                                        <a href="" class="text-decoration-none text-white">
-                                        Lorem ipsum</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="col-xl-3 col-6 d-flex flex-column align-items-center">
-                            <div>
-                                <h3 class="text-white poppins medium1 fst-normal fw-semibold lineHeight150 mb-4">
-                                    PRODUCTS
-                                </h3>
-                                <ul class="ps-0 d-flex flex-column gap-3">
-                                    <li
-                                        class="poppins medium1 fst-normal fw-normal lineHeight150 opacity07 underline position-relative">
-                                        <a href="" class="text-decoration-none text-white">
-                                            Lorem ipsum</a>
-                                    </li>
+                        <div class="col-md-7 col-12 d-flex justify-content-between flex-wrap mt-3 mt-md-0">
+                            <div class="col-xl-3 col-6 d-flex flex-column align-items-xl-start align-items-center">
+                                <div>
+                                    <h3 class="text-white poppins medium1 fst-normal fw-semibold lineHeight150 mb-4">
+                                        CUSTOM
+                                        LINKS
+                                    </h3>
+                                    <ul class="ps-0 d-flex flex-column gap-3">
                                         <li
                                             class="poppins medium1 fst-normal fw-normal lineHeight150 opacity07 underline position-relative">
                                             <a href="" class="text-decoration-none text-white">
                                                 Lorem ipsum</a>
                                         </li>
-                                    </a>
                                         <li
                                             class="poppins medium1 fst-normal fw-normal lineHeight150 opacity07 underline position-relative">
                                             <a href="" class="text-decoration-none text-white">
                                                 Lorem ipsum</a>
                                         </li>
-                                    </a>
-                                </ul>
+                                    </ul>
+                                </div>
                             </div>
-                        </div>
-                        <div class="col-xl-3 col-6 d-flex flex-column align-items-center">
-                            <div>
-                                <h3 class="text-white poppins medium1 fst-normal fw-semibold lineHeight150 mb-4">OUR
-                                    COMPANY
-                                </h3>
-                                <ul class="ps-0 d-flex flex-column gap-3">
-                                    <li
-                                        class="poppins medium1 fst-normal fw-normal lineHeight150 opacity07 underline position-relative">
-                                        <a href="" class="text-decoration-none text-white">
-                                            Lorem ipsum</a></li>
+                            <div class="col-xl-3 col-6 d-flex flex-column align-items-center">
+                                <div>
+                                    <h3 class="text-white poppins medium1 fst-normal fw-semibold lineHeight150 mb-4">
+                                        PRODUCTS
+                                    </h3>
+                                    <ul class="ps-0 d-flex flex-column gap-3">
                                         <li
                                             class="poppins medium1 fst-normal fw-normal lineHeight150 opacity07 underline position-relative">
                                             <a href="" class="text-decoration-none text-white">
-                                                Lorem ipsum</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="col-xl-3 col-6 d-flex flex-column align-items-xl-end align-items-center">
-                            <div>
-                                <h3 class="text-white poppins medium1 fst-normal fw-semibold lineHeight150 mb-4">YOUR
-                                    ACCOUNT
-                                </h3>
-                                <ul class="ps-0 d-flex flex-column gap-3">
-                                    <li
-                                        class="poppins medium1 fst-normal fw-normal lineHeight150 opacity07 underline position-relative">
-                                        <a href="" class="text-decoration-none text-white">
-                                            Lorem ipsum</a></li>
+                                                Lorem ipsum</a>
+                                        </li>
                                         <li
                                             class="poppins medium1 fst-normal fw-normal lineHeight150 opacity07 underline position-relative">
                                             <a href="" class="text-decoration-none text-white">
-                                                Lorem ipsum</a></li>
-                                    </a>
-                                </ul>
+                                                Lorem ipsum</a>
+                                        </li>
+                                        <li
+                                            class="poppins medium1 fst-normal fw-normal lineHeight150 opacity07 underline position-relative">
+                                            <a href="" class="text-decoration-none text-white">
+                                                Lorem ipsum</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-6 d-flex flex-column align-items-center">
+                                <div>
+                                    <h3 class="text-white poppins medium1 fst-normal fw-semibold lineHeight150 mb-4">OUR
+                                        COMPANY
+                                    </h3>
+                                    <ul class="ps-0 d-flex flex-column gap-3">
+                                        <li
+                                            class="poppins medium1 fst-normal fw-normal lineHeight150 opacity07 underline position-relative">
+                                            <a href="" class="text-decoration-none text-white">
+                                                Lorem ipsum</a>
+                                        </li>
+                                        <li
+                                            class="poppins medium1 fst-normal fw-normal lineHeight150 opacity07 underline position-relative">
+                                            <a href="" class="text-decoration-none text-white">
+                                                Lorem ipsum</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-6 d-flex flex-column align-items-xl-end align-items-center">
+                                <div>
+                                    <h3 class="text-white poppins medium1 fst-normal fw-semibold lineHeight150 mb-4">
+                                        YOUR
+                                        ACCOUNT
+                                    </h3>
+                                    <ul class="ps-0 d-flex flex-column gap-3">
+                                        <li
+                                            class="poppins medium1 fst-normal fw-normal lineHeight150 opacity07 underline position-relative">
+                                            <a href="" class="text-decoration-none text-white">
+                                                Lorem ipsum</a>
+                                        </li>
+                                        <li
+                                            class="poppins medium1 fst-normal fw-normal lineHeight150 opacity07 underline position-relative">
+                                            <a href="" class="text-decoration-none text-white">
+                                                Lorem ipsum</a>
+                                        </li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="copyright d-flex align-items-center justify-content-center">
-            <p class="text-white text-center poppins medium1 fst-normal fw-normal lineHeight150 opacity07 mb-0">©
-                Copyright SNKRPLTS 2021.</p>
-        </div>
-
-    </footer>
-
-
+            <div class="copyright d-flex align-items-center justify-content-center">
+                <p class="text-white text-center poppins medium1 fst-normal fw-normal lineHeight150 opacity07 mb-0">©
+                    Copyright SNKRPLTS 2021.</p>
+            </div>
+        </footer>
+    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
         integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"

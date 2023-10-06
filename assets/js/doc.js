@@ -6,6 +6,7 @@ let span3 = document.querySelector(".span3");
 let number = document.querySelector(".number");
 let add = document.querySelector(".add");
 let subtract = document.querySelector(".subtract");
+
 const change = src => {
     document.getElementById('main').src = src;
 };
@@ -20,11 +21,12 @@ subtract.addEventListener("click", function () {
     }
 });
 
-let preloader = setTimeout(remove, 5000);
+let preloader = setTimeout(remove, 3000);
 
 function remove() {
+    document.getElementById("preloader").classList.remove("d-flex");
     document.getElementById("preloader").style.display = "none";
-    document.querySelector("body").classList.remove("overflow-hidden");
+    document.getElementById("content").classList.remove("d-none");
 }
 
 function navbar() {
@@ -33,6 +35,14 @@ function navbar() {
     span2.classList.toggle("crossLine2");
     span3.classList.toggle("d-none");
     document.querySelector("body").classList.toggle("overflow-hidden");
+}
+
+function navbar2() {
+    view.classList.toggle("end-0");
+    span1.classList.toggle("crossLine1");
+    span2.classList.toggle("crossLine2");
+    span3.classList.toggle("d-none");
+    document.querySelector("body").classList.remove("overflow-hidden");
 }
 
 function openTab(evt, Id) {
@@ -49,3 +59,18 @@ function openTab(evt, Id) {
     evt.currentTarget.className += " tabLabelActive";
 }
 document.getElementById("defaultOpen").click();
+
+let backToTop = document.querySelector("#backToTop");
+
+window.addEventListener("scroll", function () {
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        backToTop.style.display = "block";
+    } else {
+        backToTop.style.display = "none";
+    }
+});
+
+function up() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+};
